@@ -54,8 +54,8 @@ a { color: inherit; text-decoration: none; }
 /* ===== Navigation ===== */
 .nav {
   position: fixed; inset: 0 0 auto 0; z-index: 100;
-  height: 72px;
-  padding-top: env(safe-area-inset-top, 0px);
+  display: flex; align-items: center;
+  min-height: 64px;
   background: rgba(251,251,253,.72);
   backdrop-filter: saturate(180%) blur(20px);
   -webkit-backdrop-filter: saturate(180%) blur(20px);
@@ -64,7 +64,7 @@ a { color: inherit; text-decoration: none; }
 }
 .nav.is-scrolled { border-bottom-color: rgba(0,0,0,.08); }
 .nav__inner {
-  max-width: var(--maxw); height: 100%; margin: 0 auto; padding: 0 22px;
+  width: 100%; max-width: var(--maxw); margin: 0 auto; padding: 12px 22px;
   display: flex; align-items: center; gap: 24px;
 }
 .nav__brand { display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 18px; flex-shrink: 0; }
@@ -91,7 +91,7 @@ a { color: inherit; text-decoration: none; }
 .nav__burger[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
 .nav__mobile {
-  position: fixed; top: 72px; left: 0; right: 0;
+  position: fixed; top: 64px; left: 0; right: 0;
   background: rgba(251,251,253,.96);
   backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
   display: flex; flex-direction: column; padding: 12px 22px 26px;
